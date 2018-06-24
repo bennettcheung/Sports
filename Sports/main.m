@@ -10,8 +10,14 @@
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
+        NSMutableArray *favoriteSports = [NSMutableArray arrayWithObjects: @"Badminton", @"Tennis", @"Yoga", @"Hiking", nil];
+        [favoriteSports removeLastObject];
+        [favoriteSports insertObject:@"Hiking" atIndex:0];
+        
+        for (NSString *sport in favoriteSports) {
+            NSLog(@"%@", sport);
+        }
+        
     }
     return 0;
 }
