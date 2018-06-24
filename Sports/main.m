@@ -18,6 +18,17 @@ int main(int argc, const char * argv[]) {
             NSLog(@"%@", sport);
         }
         
+        NSDictionary *sportEmojis = @{
+                                          @"Badminton" : @"🏸",
+                                          @"Tennis": @"🎾",
+                                          @"Yoga": @"🧘‍♀️",
+                                          @"Hiking": @"🧗‍♂️"
+                   };
+        for (NSString *key in [sportEmojis allKeys])
+        {
+            NSLog(@"%@", sportEmojis[key]);
+        }
+        
     }
     return 0;
 }
